@@ -1,0 +1,26 @@
+*** Settings ***
+Documentation  Test cases implementation
+
+*** Variables *** 
+${google_url}    http://www.google.com/
+
+
+*** Keywords *** 
+
+Open google page
+    Open Browser  ${google_url}  ${browser}
+    Maximize Browser Window
+    Set Selenium Speed  ${sel_speed}
+    Title Should Be  Google
+
+Input keyword to search    [Arguments]  ${search}
+    Input Text    q    ${search}
+
+Click search button
+    Click Button    btnK
+
+Click the versa site link
+    Click Link  https://www.versa-networks.com/
+
+Versa site link should open
+    Title Should Be  (Software Defined) SD-WAN & SD-Security Companies | Versa Networks

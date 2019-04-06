@@ -1,0 +1,7 @@
+*** Settings ***
+Documentation  common setting and Selenium2Lib import 
+Library  Selenium2Library
+
+*** Variables *** 
+${browser}  chrome
+${sel_speed}  1
